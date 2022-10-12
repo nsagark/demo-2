@@ -21,7 +21,7 @@ spec:
   - name: validate-resources
     match:
       any:
-        resources:
+      - resources:
           kinds:
           - Pod
           namespaces:
