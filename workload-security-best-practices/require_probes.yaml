@@ -23,7 +23,7 @@ spec:
   - name: validate-livenessProbe-readinessProbe
     match:
       any:
-        resources:
+      - resources:
           kinds:
           - Pod
           namespaces:
