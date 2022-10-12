@@ -20,11 +20,12 @@ spec:
   rules:
   - name: validate-resources
     match:
-      resources:
-        kinds:
-        - Pod
-        namespaces:
-        - kyverno-test
+      any:
+        resources:
+          kinds:
+          - Pod
+          namespaces:
+          - kyverno-test
     validate:
       message: "CPU and memory resource requests and limits are required."
       pattern:
