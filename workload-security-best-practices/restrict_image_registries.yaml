@@ -20,11 +20,12 @@ spec:
   rules:
   - name: validate-registries
     match:
-      resources:
-        kinds:
-        - Pod
-        namespaces:
-        - kyverno-test
+      any:
+        resources:
+          kinds:
+          - Pod
+          namespaces:
+          - kyverno-test
     validate:
       message: "Unknown image registry."
       pattern:
