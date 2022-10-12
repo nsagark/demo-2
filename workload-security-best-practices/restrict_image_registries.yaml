@@ -21,7 +21,7 @@ spec:
   - name: validate-registries
     match:
       any:
-        resources:
+      - resources:
           kinds:
           - Pod
           namespaces:
