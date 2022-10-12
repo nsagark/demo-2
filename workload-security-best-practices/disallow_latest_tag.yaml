@@ -19,7 +19,7 @@ spec:
   - name: require-image-tag
     match:
       any:
-        resources:
+      - resources:
           kinds:
           - Pod
           namespaces:
@@ -33,7 +33,7 @@ spec:
   - name: validate-image-tag
     match:
       any:
-        resources:
+      - resources:
           kinds:
           - Pod
           namespaces:
