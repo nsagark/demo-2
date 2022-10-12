@@ -22,11 +22,12 @@ spec:
   rules:
   - name: validate-livenessProbe-readinessProbe
     match:
-      resources:
-        kinds:
-        - Pod
-        namespaces:
-        - kyverno-test
+      any:
+        resources:
+          kinds:
+          - Pod
+          namespaces:
+          - kyverno-test
     validate:
       message: "Liveness and readiness probes are required."
       pattern:
