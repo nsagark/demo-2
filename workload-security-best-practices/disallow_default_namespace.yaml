@@ -21,11 +21,11 @@ spec:
   - name: validate-namespace
     match:
       any:
-        resources:
-          kinds:
-          - Pod
-          namespaces:
-          - kyverno-test
+      - resources:
+           kinds:
+           - Pod
+           namespaces:
+           - kyverno-test
     validate:
       message: "Using 'default' namespace is not allowed."
       pattern:
@@ -34,7 +34,7 @@ spec:
   - name: validate-podcontroller-namespace
     match:
       any:
-        resources:
+      - resources:
           kinds:
           - DaemonSet
           - Deployment
