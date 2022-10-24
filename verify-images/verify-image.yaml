@@ -18,7 +18,7 @@ spec:
               - kyverno-test
       verifyImages:
       - imageReferences:
-        - "ghcr.io/kyverno/test-verify-image:*"
+        - "index.docker.io/sagarkundral/test-signed-image:*"
         attestors:
         - count: 1
           entries:
