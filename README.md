@@ -1,3 +1,3 @@
 # demo-test
 
-Testing protected branch in git
+Testing protected branch in git again
