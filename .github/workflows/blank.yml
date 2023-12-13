@@ -15,7 +15,7 @@ jobs:
     - name: Install NCTL
       run: |
         # Ensure you are using the correct URL for downloading nctl
-        curl -LO https://nirmata-downloads.s3.us-east-2.amazonaws.com/nctl/nctl_3.3.6/nctl_3.3.6_linux_64-bit.zip
+        curl -LO curl -LO https://nirmata-downloads.s3.us-east-2.amazonaws.com/nctl/nctl_3.3.8/nctl_3.3.8_linux_64-bit.zip
         unzip nctl_3.3.8_linux_64-bit.zip    
         chmod +x nctl
         sudo mv nctl /usr/local/bin/
