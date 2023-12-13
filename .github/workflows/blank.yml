@@ -1,0 +1,21 @@
+name: NCTL Security Scan
+
+on:
+  pull_request_review:
+    types: [submitted]
+    branches:
+      - main
+
+jobs:
+  security_scan:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+    - name: Install NCTL
+      run: |
+        curl -L https://downloads.nirmata.io/nctl/downloads/nctl-latest-linux-amd64 -o nctl
+        chmod +x nctl
+        sudo mv nctl /usr/local/bin/
+    - name: Scan Kubernetes YAMLs
+      run: nctl scan -f path/to/your/yaml/files
