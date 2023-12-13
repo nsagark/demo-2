@@ -4,18 +4,22 @@ on:
   push:
     branches:
       - main
+
 jobs:
   security_scan:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
+
     - name: Install NCTL
       run: |
+        # Ensure you are using the correct URL for downloading nctl
         curl -L https://downloads.nirmata.io/nctl/downloads/nctl-latest-linux-amd64 -o nctl
         chmod +x nctl
         sudo mv nctl /usr/local/bin/
+
     - name: Scan Kubernetes YAMLs
       run: |
         nctl version
-        #nctl scan -f workload-security-best-practices --cluster
+        # Add your scan command here
