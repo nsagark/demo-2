@@ -22,5 +22,5 @@ jobs:
 
     - name: Scan Kubernetes YAMLs
       run: |
-        nctl scan -f workload-security-best-practices --cluster
+        nctl scan --policies workload-security-best-practices -r resources/pod.yaml
         # Add your scan command here
