@@ -16,4 +16,6 @@ jobs:
         chmod +x nctl
         sudo mv nctl /usr/local/bin/
     - name: Scan Kubernetes YAMLs
-      run: nctl scan -f path/to/your/yaml/files
+      run: |
+        nctl version
+        #nctl scan -f workload-security-best-practices --cluster
