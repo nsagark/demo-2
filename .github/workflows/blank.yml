@@ -1,11 +1,9 @@
 name: NCTL Security Scan
 
 on:
-  pull_request_review:
-    types: [submitted]
+  push:
     branches:
       - main
-
 jobs:
   security_scan:
     runs-on: ubuntu-latest
