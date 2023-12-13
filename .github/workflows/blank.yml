@@ -22,5 +22,5 @@ jobs:
 
     - name: Scan Kubernetes YAMLs
       run: |
-        nctl version
+        nctl scan -f workload-security-best-practices --cluster
         # Add your scan command here
